@@ -56,3 +56,63 @@ import numpy as np
 #  principal y ceros en el resto.
 # arr = np.eye(4)
 # print("np.eye:\n", arr)
+
+# Dimensiones (ndim) Indica cuántas dimensiones tiene el array:
+# a = np.array([1,2,3])
+# print("Una dimension",a.ndim)
+# b = np.array([[1,2,3], [4,5,6]])
+# print("Dos dimensiones", b.ndim)
+# c = np.array([[[1],[2]],[[4],[5]]])
+# print("Tres dimensiones", c.ndim)
+
+# Forma (shape) Devuelve una tupla con la cantidad de elementos por dimensión.
+# a = np.array([1,2,3])
+# print("Forma de a:", a.shape)  # (3,) significa que es un vector plano de 3 elementos en linea recta
+# b = np.array([[1,2,3], [4,5,6]])
+# print("Forma de b:", b.shape)  # (2, 3) 2 filas y 3 columnas
+# c = np.array([[[1],[2]],[[4],[5]]])
+# print("Forma de c:", c.shape)  # (2, 2, 1) 2 bloques, 2 filas y 1 columna
+
+# Tamaño (size) Indica la cantidad total de elementos del array
+# a = np.array([1,2,3])
+# print("Tamaño de a:", a.size)  # 3 elementos          
+
+# Tipo de datos (dtype) Los arrays son homogéneos: todos los elementos comparten el mismo tipo.
+# arr = np.array([1, 2, 3])
+# print("Tipo de datos:", arr.dtype)  # int64 
+# Si mezclás tipos, NumPy intenta unificarlos automáticamente:
+# arr = np.array([1, 2, 3.5])
+# print("Tipo de datos:", arr.dtype)  # float64
+
+# Conversión de tipos (astype)
+# Podemos forzar el tipo de un array usando .astype().
+# arr = np.array([1, 2, 3, 4])
+# print("Original:", arr, arr.dtype)
+#  Convertir a float
+# arr_float = arr.astype(float)
+# print("Convertido a float:", arr_float, arr_float.dtype)
+# # Convertir a string
+# arr_str = arr.astype(str)
+# print("Convertido a string:", arr_str, arr_str.dtype)
+
+# Indexación y slicing
+# NumPy permite acceder a porciones de un array de forma similar a las listas de Python, pero con 
+# mayor poder expresivo.
+# Indexación en 1D
+# arr = np.array([10, 20, 30, 40, 50])
+# print(arr[0])    # Primer elemento -> 10
+# print(arr[-1])   # Último elemento -> 50
+
+# #Slicing en 1D
+# print(arr[1:4])   # Elementos de índice 1 a 3 -> [20 30 40]
+# print(arr[:3])    # Primeros 3 -> [10 20 30]
+# print(arr[::2])   # Cada 2 elementos -> [10 30 50]
+
+# # Indexación en 2D
+# # En arrays de dos dimensiones se usa la notación [fila, columna].
+# mat = np.array([[1, 2, 3],
+#                 [4, 5, 6],
+#                 [7, 8, 9]])
+# print(mat[0, 0])   # Esquina superior izquierda -> 1
+# print(mat[1, 2])   # Fila 1, columna 2 -> 6
+# print(mat[-1, -1]) # Último elemento -> 9
