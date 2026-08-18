@@ -112,7 +112,23 @@ import numpy as np
 # # En arrays de dos dimensiones se usa la notación [fila, columna].
 # mat = np.array([[1, 2, 3],
 #                 [4, 5, 6],
-#                 [7, 8, 9]])
+#                 [7, 8, 9],
+#                 [10, 11, 12]])
 # print(mat[0, 0])   # Esquina superior izquierda -> 1
 # print(mat[1, 2])   # Fila 1, columna 2 -> 6
 # print(mat[-1, -1]) # Último elemento -> 9
+
+#Slicing en 2D
+# mat = np.array([[1, 2, 3],
+#                 [4, 5, 6],
+#                 [7, 8, 9],
+#                 [10, 11, 12]])
+# print(mat[2:4, 1:3])
+
+# Indexación y slicing en ND
+# En arrays con más dimensiones se agregan más índices separados por comas.
+# arr3d = np.array([[[1, 2], [3, 4]],
+#                   [[5, 6], [7, 8]]])
+# # print(arr3d[0, 1, 1]) # Primer bloque, segunda fila, segunda columna -> 4
+# print(arr3d[1, 1:2, 0:2]) # [7 8]
+# print(arr3d[1, :, :]) # Segundo bloque completo -> [[5 6] [7 8]]
